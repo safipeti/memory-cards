@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Memory Game</title>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <h1 class="title">Memory Game</h1>
+
+            <div id="setting-box" class="setting-box">
+                <div id="close-setting-box" class="close">&times;</div>
+                <div class="category">
+                    Select Topic:
+
+                    <div id="selected-category" class="selected-category">
+                        <span id="category-name" class="category-name"></span>
+                        <span id="category-open"></span>
+                    </div>
+                    <div
+                        id="category-container"
+                        class="category-container"
+                    ></div>
+                </div>
+                <div class="select-container">
+                    <div>
+                        <p id="grid-size-label">Number of cards</p>
+                        <select class="rounded-control" id="cards-size">
+                            <option
+                                class="cards-size-option"
+                                data-cols="2"
+                                value="2"
+                                >4 cards (2 pairs)</option
+                            >
+                            <option
+                                class="cards-size-option"
+                                data-cols="3"
+                                value="3"
+                                >6 cards (3 pairs)</option
+                            >
+                            <option
+                                class="cards-size-option"
+                                data-cols="4"
+                                value="6"
+                                >12 cards (6 pairs)
+                            </option>
+                            <option
+                                class="cards-size-option"
+                                selected
+                                data-cols="4"
+                                value="8"
+                                >16 cards (8 pairs)</option
+                            >
+                            <option
+                                class="cards-size-option"
+                                data-cols="5"
+                                value="10"
+                                >20 cards (10 pairs)</option
+                            >
+                            <option
+                                class="cards-size-option"
+                                data-cols="6"
+                                value="12"
+                                >24 cards (12 pairs)</option
+                            >
+                            <option
+                                class="cards-size-option"
+                                data-cols="6"
+                                value="15"
+                                >30 cards (15 pairs)</option
+                            >
+                        </select>
+                    </div>
+                </div>
+                <div class="start-game">
+                    <button id="start-game" class="btn start-game-btn">
+                        Start Game
+                    </button>
+                </div>
+            </div>
+            <div id="overlay"></div>
+
+            <div class="settings"></div>
+            <div id="scores" class="scores">
+                <p id="topic-name"></p>
+                <span id="trial"></span> / <span id="match"></span>
+            </div>
+            <main id="cardsHolder"></main>
+            <div class="controls" id="controls">
+                <button id="new-game" class="btn setting-btn">
+                    Start New Game
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </button>
+                <button id="settings" class="settings btn setting-btn">
+                    Settings <i class="fas fa-cog"></i>
+                </button>
+                <button id="repeat-game" class="btn setting-btn">
+                    Repeat Game <i class="fas fa-sync"></i>
+                </button>
+            </div>
+        </div>
+
+        <script src="appSettings.js"></script>
+        <script src="modules/model.js"></script>
+        <script src="domSelectors.js"></script>
+        <script src="modules/pubsub.js"></script>
+        <script src="modules/topic.js"></script>
+        <script src="modules/match.js"></script>
+        <script src="modules/ui.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
