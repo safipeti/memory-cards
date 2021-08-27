@@ -1,8 +1,8 @@
 const appSettings = {
-    data: "http://memory-cards-api.safipeti.com/",
+    data: "",
     categoryId: 2,
     topicId: 1,
-    imgSrc: "http://memory-cards-api.safipeti.com/img/",
+    imgSrc: "",
     cols: 4,
     cardSize: 8,
 };
